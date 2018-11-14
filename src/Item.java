@@ -1,7 +1,3 @@
-/**
- * Created by eunsangg10 on 11/13/18.
- */
-
 
 import java.util.HashMap;
 import java.util.TreeMap;
@@ -31,17 +27,39 @@ public class Item {
         this.quant = quant;
         this.pretax = pretax;
     }
+
+    /**
+     * Returns item name
+     *
+     * @return name of item
+     */
     public String getName(){
         return name;
     }
 
+    /**
+     * Return item quantity
+     *
+     * @return quantity of item
+     */
     public int getQuant(){
         return quant;
     }
+
+    /**
+     * Return price of item
+     *
+     * @return price of item
+     */
     public double getPrice(){
         return pretax;
     }
 
+    /**
+     * Calculate tax of item
+     *
+     * @return rounded up tax
+     */
     public double getTax(){
         double tax = pretax;
         if (imported && !exempt) {
@@ -53,6 +71,7 @@ public class Item {
         } else {
             return 0;
         }
+        // This is used to round up tax
         tax = Math.ceil(tax * 20.0) / 20.0;
         return tax;
     }

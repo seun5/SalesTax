@@ -1,6 +1,4 @@
-/**
- * Created by eunsangg10 on 11/13/18.
- */
+
 import java.io.File;
 import java.util.Scanner;
 import java.io.FileNotFoundException;
